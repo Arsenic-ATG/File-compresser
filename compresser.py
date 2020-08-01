@@ -11,7 +11,7 @@ def backup_to_zip(folder):
 	while True:
 		zipFile_name = os.path.basename(folder) + '_' + str(number) + '.zip'
 
-		if not os.path.exist(zipFile_name):
+		if not os.path.exists(zipFile_name):
 			break
 
 		number + number + 1
