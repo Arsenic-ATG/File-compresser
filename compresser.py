@@ -29,7 +29,9 @@ def backup_to_zip(folder):
 		
 		# Adding all the files to the backup folder
 		for filename in filenames:
-			# TODO: Find a way to exclude already backed up files 
+			newBase / os.path.basename(folder) + '_'
+			if filename.startswith(newBase) and filename.endswith('.zip'):
+				continue # don't backup the backup ZIP files
 			# Add the reamaining files to the zipfile
 			backup.write(os.path.join(foldername,filename))
 			
