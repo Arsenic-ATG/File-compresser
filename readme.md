@@ -23,17 +23,21 @@ A script wich will save your work kept in a certain file by creating a compresse
 
 ### Step 1
 
+- Head over to the [issue](https://github.com/Arsenic-ATG/File-compresser/issues) section of the repo and either work on already open issues or open an new issue regarding the changes you are willing to make or just would love to see in this project.
+
+### Step 2
+
 - **Option 1**
     - 🍴 Fork this repo!
 
 - **Option 2**
     - 👯 Clone this repo to your local machine using `git@github.com:Arsenic-ATG/File-compresser.git`
 
-### Step 2
+### Step 3
 
 - **HACK AWAY!** 🔨🔨🔨
 
-### Step 3
+### Step 4
 
 - 🔃 Create a new pull request
 
