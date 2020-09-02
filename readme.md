@@ -11,6 +11,10 @@ A script wich will save your work kept in a certain file by creating a compresse
 - If you don't have python on your machine then you can download it from [here](https://www.python.org/downloads/)
 - You would also need an text editor to make changes to the code
 
+### get it running
+
+- Right now the only way to run is through altering the code (calling the function)
+
 ---
 
 ## 👩‍💻 Contributing 👨‍💻
