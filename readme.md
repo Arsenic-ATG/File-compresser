@@ -8,8 +8,8 @@ A script wich will save your work kept in a certain file by creating a compresse
 ### Setup 💻
 
 - This is a plain python script which requires you to have python installed on your system
-- if you don't have python on your machine then you can download it from [here](https://www.python.org/downloads/)
-- you would also need an text editor to make changes to the code
+- If you don't have python on your machine then you can download it from [here](https://www.python.org/downloads/)
+- You would also need an text editor to make changes to the code
 
 ---
 
@@ -34,3 +34,6 @@ A script wich will save your work kept in a certain file by creating a compresse
 - 🔃 Create a new pull request
 
 ---
+
+## Liked it ? 🤩
+If you likes this repo then don't forget to **star** it 👍
