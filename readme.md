@@ -44,7 +44,7 @@ A script wich will save your work kept in a certain file by creating a compresse
 ---
 
 ## Liked it ? 🤩
-If you likes this repo then don't forget to **star** it 👍
+If you likes this repo then don't forget to give it a **star** 👍
 
 ## License
 
