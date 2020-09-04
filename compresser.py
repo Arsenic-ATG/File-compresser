@@ -1,39 +1,46 @@
 # backupToZip.py - Copies an entire folder and its contents into a ZIP file whose filename increments.
+import os
+from zipfile import ZipFile
+import argparse
 
-import os,zipfile
 
 def backup_to_zip(folder):
-	# Backup the entire contents of "folder" into a ZIP file.
-	folder = os.path.abspath(folder)
+    """
+    Backup the entire contents of "folder" into a ZIP file in ./backup directory.
+    :param folder: str
+    :return: None
+    """
 
-	# Figure out the filename this code should use based on what files already exist.
-	number = 1;
-	while True:
-		zipFile_name = os.path.basename(folder) + '_' + str(number) + '.zip'
 
-		if not os.path.exists(zipFile_name):
-			break
+    if not os.path.exists("backup"):
+        os.mkdir("backup")
+    os.chdir("backup")
 
-		number + number + 1
+   # increment file suffix number if it already exists.
+    inc = 0
+    while os.path.exists(folder.split("/")[-1] + "_%s.zip" % inc):
+        inc += 1
+    zip_file_name = folder.split("/")[-1]+ "_" + str(inc) + ".zip"
 
-	# Create the ZIP file.
-	print("creating %s...",zipFile_name)
-	backup = zipfile.ZipFile('zipFile_name','w')
+    # Create the ZIP file
+    print("Zipping file "+folder_name+" into backup/"+zip_file_name)
 
-	# Walk the entire folder tree and compress the files in each folder.
-	for foldername,subfolder,filenames in os.walk(folder):
-		print("Adding file %s...",foldername)
-		
-		# Add the current folder to the zip file
-		backup.write(foldername)
-		
-		# Adding all the files to the backup folder
-		for filename in filenames:
-			newBase / os.path.basename(folder) + '_'
-			if filename.startswith(newBase) and filename.endswith('.zip'):
-				continue # don't backup the backup ZIP files
-			# Add the reamaining files to the zipfile
-			backup.write(os.path.join(foldername,filename))
-			
-	backup.close()
-	print('Done.')
+    with ZipFile(zip_file_name, 'w') as zipf:
+        # writing each file one by one
+        for root, dirs, files in os.walk(folder):
+            for file in files:
+                zipf.write(os.path.join(root, file),arcname=os.path.join(root.replace(folder, ""), file))
+                # print(os.path.join(root, file))
+    print('Done')
+
+
+if __name__ == "__main__":
+
+    # Read folder name from command line
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-f', '--folder', required=True, help="Enter absolute folder name of the file to be zipped")
+    args = parser.parse_args()
+    folder_name = args.folder
+
+    #print(folder_name)
+    backup_to_zip(folder_name)
