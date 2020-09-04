@@ -13,7 +13,8 @@ A script wich will save your work kept in a certain file by creating a compresse
 
 ### get it running
 
-- Right now the only way to run is through altering the code (calling the function)
+python compressor.py -f <path of folder to be zipped>
+after running the script zipped file will be created in ./backup directory
 
 ---
 
