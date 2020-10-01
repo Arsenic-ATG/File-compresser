@@ -13,8 +13,9 @@ A script wich will save your work kept in a certain file by creating a compresse
 
 ### get it running
 
-python compressor.py -f <path of folder to be zipped>
-after running the script zipped file will be created in ./backup directory
+- in command line run `python compressor.py -f <path of folder to be zipped>`
+
+- After running the script zipped file will be created in ./backup directory
 
 ---
 
